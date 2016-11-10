@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIApp", "UIApp\UIApp.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadExamples", "ThreadExamples\ThreadExamples.csproj", "{AE4E2D2E-48D7-47C7-BE51-6FB0DC6F1A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Philosophes", "Philosophes\Philosophes.csproj", "{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AE4E2D2E-48D7-47C7-BE51-6FB0DC6F1A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE4E2D2E-48D7-47C7-BE51-6FB0DC6F1A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE4E2D2E-48D7-47C7-BE51-6FB0DC6F1A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
