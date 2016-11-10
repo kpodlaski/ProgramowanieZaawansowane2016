@@ -28,6 +28,7 @@ namespace Philosophes
         {
             Console.WriteLine(Name + " Thinks");
             Thread.Sleep(rand.Next() % sleepParameter);
+            Console.WriteLine(Name + " Finished Thinking");
         }
 
         public void Live()
@@ -37,6 +38,15 @@ namespace Philosophes
                 Think();
                 Eat();
             }
+        }
+
+        public Philosoph(String name, ChopStick right, ChopStick left)
+        {
+            Name = name;
+            this.right = right;
+            this.left = left;
+            Thread t = new Thread(new ThreadStart(this.Live));
+            t.Start();
         }
     }
 }
