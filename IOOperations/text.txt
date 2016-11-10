@@ -1,0 +1,80 @@
+﻿Microsoft Logo
+  Gray Pipe Developer Network
+ 
+search finder
+ .NET Framework 4.6 and 4.5 Development Guide Print  Export (0)
+.NET Framework Development Guide
+
+.NET Framework (current version)
+ 
+This section explains how to create, configure, debug, secure, and deploy your .NET Framework apps. The section also provides information about technology areas such as dynamic programming, interoperability, extensibility, memory management, and threading.
+In This Section
+.NET Framework Application Essentials
+Provides information about basic app development tasks, such as programming with app domains and assemblies, using attributes, formatting and parsing base types, using collections, handling events and exceptions, using files and data streams, and using generics.
+Data and Modeling in the .NET Framework
+Provides information about how to access data using ADO.NET, Language Integrated Query (LINQ), WCF Data Services, and XML.
+Developing Client Applications with the .NET Framework
+Explains how to create Windows-based apps by using Windows Presentation Foundation (WPF) or Windows Forms.
+Developing Web Applications with ASP.NET
+Provides links to information about using ASP.NET to build enterprise-class web apps with a minimum of coding.
+Developing Service-Oriented Applications with WCF
+Describes how to use Windows Communication Foundation (WCF) to build service-oriented apps that are secure and reliable.
+Developing Windows Service Applications
+Explains how you can use Visual Studio and the .NET Framework to create an app that is installed as a service, and start, stop, and otherwise control its behavior.
+Parallel Processing and Concurrency in the .NET Framework
+Provides information about managed threading, parallel programming, and asynchronous programming design patterns.
+Network Programming in the .NET Framework
+Describes the layered, extensible, and managed implementation of Internet services that you can quickly and easily integrate into your apps.
+Configuring .NET Framework Apps
+Explains how you can use configuration files to change settings without having to recompile your .NET Framework apps.
+Compiling Apps with .NET Native
+Explains how you can use the .NET Native precompilation technology to build and deploy Windows Store apps. .NET Native compiles apps that are written in managed code (C#) and that target the .NET Framework to native code.
+Security in the .NET Framework
+Provides information about the classes and services in the .NET Framework that facilitate secure app development.
+Debugging, Tracing, and Profiling
+Explains how to test, optimize, and profile .NET Framework apps and the app environment. This section includes information for administrators as well as developers.
+Developing for Multiple Platforms with the .NET Framework
+Provides information about how you can use the .NET Framework to build assemblies that can be shared across multiple platforms and multiple devices such as phones, desktop, and web.
+Deploying the .NET Framework and Applications
+Explains how to package and distribute your .NET Framework app, and includes deployment guides for both developers and administrators.
+.NET Framework Performance
+Provides information about caching, lazy initialization, reliability, and ETW events.
+Building Workflows in the .NET Framework
+Provides information about the programming model, samples, and tools for using Windows Workflow Foundation (WF).
+Advanced Reading for the .NET Framework
+Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.
+Reference
+.NET Framework Class Library
+Supplies syntax, code examples, and usage information for each class that is contained in the .NET Framework namespaces.
+Related Sections
+Getting Started with the .NET Framework
+Provides a comprehensive overview of the .NET Framework and links to additional resources.
+What's New in the .NET Framework
+Describes key new features and changes in the latest version of the .NET Framework. Includes lists of new and obsolete types and members, and provides a guide for migrating your apps from the previous version of the .NET Framework.
+.NET Framework Tools
+Describes the tools that help you develop, configure, and deploy apps by using .NET Framework technologies.
+.NET Framework Samples
+Provides links to the MSDN Code Samples Gallery for sample apps that demonstrate .NET Framework technologies.
+Is this page helpful?  Yes  No
+Dev centers
+Windows
+Office
+Visual Studio
+Microsoft Azure
+More...
+Learning resources
+Microsoft Virtual Academy
+Channel 9
+MSDN Magazine
+Community
+Forums
+Blogs
+Codeplex
+Support
+Self support
+Programs
+BizSpark (for startups)
+Microsoft Imagine (for students)
+United States (English)
+Newsletter Privacy & cookies Terms of use Trademarks
+logo© 2016 Microsoft
