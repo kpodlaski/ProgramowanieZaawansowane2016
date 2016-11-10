@@ -11,7 +11,7 @@ namespace Philosophes
     {
         private static Random rand = new Random();
         public String Name { get;  set;}
-        public int sleepParameter =500;
+        public static int sleepParameter =1000;
         private ChopStick left, right;
         public void Eat()
         {

@@ -13,9 +13,14 @@ namespace Philosophes
         public void pickUp()
         {
             lock (this) {
-                while(!isUsed){
-                    isUsed = true;
+                while(true){
+                    if (!isUsed)
+                    {
+                        isUsed = true;
+                        break;
+                    }
                 }
+                
             }        
         }
 

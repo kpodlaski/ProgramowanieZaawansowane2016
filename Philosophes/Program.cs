@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Philosophes
@@ -10,15 +11,18 @@ namespace Philosophes
     {
         static void Main(string[] args)
         {
-            ChopStick[] chopsticks = new ChopStick[5];
-            Philosoph[] philosophes = new Philosoph[5];
+            int size = 5;
+            Philosoph.sleepParameter = 20;
+            ChopStick[] chopsticks = new ChopStick[size];
+            Philosoph[] philosophes = new Philosoph[size];
             for (int i=0; i< chopsticks.Length; i++)
             {
                 chopsticks[i] = new ChopStick();
             }
             for (int i = 0; i < chopsticks.Length; i++)
             {
-                philosophes[i] = new Philosoph("P"+i, chopsticks[i], chopsticks[(i+1)%5] );
+                philosophes[i] = new Philosoph("P"+i, chopsticks[i], chopsticks[(i+1)%size] );
+                Thread.Sleep(500);
             }
         }
     }
