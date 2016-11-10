@@ -27,20 +27,38 @@ namespace Philosophes
                         right.pickUp();
                         rChS = true;
                     }
+                    else
+                    {
+                        Monitor.Wait(right);
+                    }
+
                 }
                 if (!rChS) continue;
-                lock (left)
-                {
+                lock (left)                {
                     if (!left.canBeUsed())
                     {
                         left.pickUp();
                         lChS = true;
                     }
+                    else
+                    {
+                        Monitor.Wait(left);
+                    }
                 }
+                if (!lChS)                {
+                    right.putDown();
+                    rChS = false;
+                } 
+                
+                
             }
             Thread.Sleep(rand.Next() % sleepParameter);
             left.putDown();
+            lock (left)
+                Monitor.PulseAll(left);
             right.putDown();
+            lock (right)
+                Monitor.PulseAll(right);
             Console.WriteLine(Name + " finished Eating");
         }
 
