@@ -12,31 +12,31 @@ namespace Philosophes
 
         public void pickUp()
         {
-            lock (this) {
-                while(true){
-                    if (!isUsed)
-                    {
+            //lock (this) {
+            //    while(true){
+            //        if (!isUsed)
+            //        {
                         isUsed = true;
-                        break;
-                    }
-                }
+            //            break;
+            //        }
+            //    }
                 
-            }        
+            //}        
         }
 
         public void putDown()
         {
-            lock (this)
-            {
+            //lock (this)
+            //{
                 isUsed = false;
-            }
+            //}
         }
 
         public bool canBeUsed () {
-            lock (this)
-            {
+            //lock (this)
+            //{
                 return isUsed;
-            }
+            //}
         }
 
 

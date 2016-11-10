@@ -16,8 +16,28 @@ namespace Philosophes
         public void Eat()
         {
             Console.WriteLine(Name + " starts Eatind");
-            right.pickUp();
-            left.pickUp();
+            bool lChS = false;
+            bool rChS = false;
+            while (!rChS || !lChS )
+            {
+                lock (right)
+                {
+                    if (!right.canBeUsed())
+                    {
+                        right.pickUp();
+                        rChS = true;
+                    }
+                }
+                if (!rChS) continue;
+                lock (left)
+                {
+                    if (!left.canBeUsed())
+                    {
+                        left.pickUp();
+                        lChS = true;
+                    }
+                }
+            }
             Thread.Sleep(rand.Next() % sleepParameter);
             left.putDown();
             right.putDown();
