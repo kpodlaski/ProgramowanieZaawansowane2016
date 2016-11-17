@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadExamples", "ThreadExa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Philosophes", "Philosophes\Philosophes.csproj", "{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleThreadCase", "MultipleThreadCase\MultipleThreadCase.csproj", "{4FB335EC-8492-44A3-9C4D-768311F23337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B8F8FA5-4B77-475B-8BC6-A6C90E3A0C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB335EC-8492-44A3-9C4D-768311F23337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB335EC-8492-44A3-9C4D-768311F23337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB335EC-8492-44A3-9C4D-768311F23337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB335EC-8492-44A3-9C4D-768311F23337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
