@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SimpleCommunicator {
-    class Server  : IDataReceiver{
+    public class Server  : IDataReceiver, ICommunicator{
         Connection c = null;
         int port;
         Socket clientSocket;
@@ -45,6 +45,14 @@ namespace SimpleCommunicator {
                 Console.WriteLine("Serwer otrzymał:" + msg);
                 c.Send(msg);
             }
+
+        public void RegisterRecepient(IDataReceiver r) {
+            c.RegisterRecepient(r);
+        }
+
+        public void Send(String msg) {
+            c.Send(msg);
+        }
 
         //ADD CLOSE OPERATIONS
         }

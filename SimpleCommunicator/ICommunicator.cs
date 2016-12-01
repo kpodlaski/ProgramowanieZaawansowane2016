@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SimpleCommunicator {
-    public interface IDataReceiver {
-        void dataReceived(String msg);
+    public interface ICommunicator {
+        void Send(String msg);
+        void RegisterRecepient(IDataReceiver r);
         }
     }
