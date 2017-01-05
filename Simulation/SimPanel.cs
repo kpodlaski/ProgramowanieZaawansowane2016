@@ -9,21 +9,29 @@ using System.Windows.Forms;
 
 namespace Simulation  {
     public class SimPanel   {
-        SimObject[] simsy = new SimObject[20] ;
+        List<SimObject> simsy = new List<SimObject>() ;
+        SimObject simWolf;
+        public volatile bool continueSimulation = true;
+
+       
+        
         
         public SimPanel(int width, int height) {
             SimObject.width = width;
             SimObject.height = height;
-            for(int i = 0; i< simsy.Length; i++) {
-                simsy[i] = new SimObject();
+            for(int i = 0; i< 20; i++) {
+                simsy.Add(new SimObject());
             }
+            Random r = new Random();
+            simWolf = new SimObjectWolf(simsy[r.Next()%simsy.Count]);
+            simsy.Add(simWolf);
         }
 
         public void startSim() {
             foreach (SimObject sim in simsy) {
                 Thread t = new Thread(new ThreadStart(
                     () => {
-                        while (true) {
+                        while (continueSimulation) {
                             sim.move();
                             //check boundaries and rebound
                             Thread.Sleep(10);
@@ -39,11 +47,27 @@ namespace Simulation  {
             //Pen pen = new Pen(System.Drawing.Color.BlueViolet, 4);
             //Pen pen2 = new Pen(System.Drawing.Color.BurlyWood, 1);
             Brush br = new SolidBrush(System.Drawing.Color.BlueViolet);
+            Brush br2 = new SolidBrush(Color.Red);
             //g.FillEllipse(br, new Rectangle(20,40,x,y));
             //g.DrawRectangle(pen2, new Rectangle(20, 40, x, y));
+            Brush _br;
             foreach (SimObject sim in simsy) {
-                g.FillEllipse(br, new Rectangle(sim.x, sim.y, 5, 5));
+                if (sim is SimObjectWolf) {
+                    _br = br2;
+                }
+                else _br = br;
+                g.FillEllipse(_br, new Rectangle((int)sim.x, (int)sim.y, 10, 10));              
             }
+        }
+
+        internal void countMeans() {
+            double xs = 0, ys = 0;
+            foreach (SimObject sim in simsy) {
+                xs += sim.x;
+                ys += sim.y;
+            }
+            SimObject.xs = (float) (xs / simsy.Count());
+            SimObject.ys = (float) (ys / simsy.Count());
         }
     }
 

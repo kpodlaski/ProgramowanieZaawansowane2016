@@ -30,16 +30,18 @@
             // 
             // viewPanel
             // 
-            this.viewPanel.Location = new System.Drawing.Point(13, 13);
+            this.viewPanel.Location = new System.Drawing.Point(17, 16);
+            this.viewPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewPanel.Name = "viewPanel";
-            this.viewPanel.Size = new System.Drawing.Size(773, 366);
+            this.viewPanel.Size = new System.Drawing.Size(1031, 450);
             this.viewPanel.TabIndex = 0;
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(13, 417);
+            this.startButton.Location = new System.Drawing.Point(17, 513);
+            this.startButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(139, 23);
+            this.startButton.Size = new System.Drawing.Size(185, 28);
             this.startButton.TabIndex = 1;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
@@ -47,13 +49,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 484);
+            this.ClientSize = new System.Drawing.Size(1081, 596);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.viewPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
 
         }
