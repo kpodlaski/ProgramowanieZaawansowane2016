@@ -22,7 +22,7 @@ namespace Simulation {
             vy = rand.Next() % 3;
         }
 
-        public void move() {
+        public virtual void move() {
             countForce();
             x +=  vx-0.5*ax;
             y += vy-0.5*ay;
@@ -63,5 +63,35 @@ namespace Simulation {
 
     }
 
-    
+
+    class SimHorse : SimObject{
+        static Random rand = new Random();
+        public static int distanceToEnd;
+        public volatile bool finished = false;
+        private int t = 0;
+
+        public SimHorse(int y) {
+            x = 30;
+            this.y = y;
+            vx = rand.NextDouble()*0.00001;
+        }
+
+        public override void move() {
+
+            if (x < distanceToEnd) {
+                x += vx;
+                t++;
+            }
+            else {
+                finished = true;
+                Console.WriteLine(y + " :: " + t);
+            }
+        }
+
+        
+
+        
+
+    }
+
 }

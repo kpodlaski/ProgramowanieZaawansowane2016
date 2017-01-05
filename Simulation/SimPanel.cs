@@ -10,31 +10,33 @@ using System.Windows.Forms;
 namespace Simulation  {
     public class SimPanel   {
         List<SimObject> simsy = new List<SimObject>() ;
-        SimObject simWolf;
+        //SimObject simWolf;
         public volatile bool continueSimulation = true;
 
        
         
         
         public SimPanel(int width, int height) {
-            SimObject.width = width;
-            SimObject.height = height;
-            for(int i = 0; i< 20; i++) {
-                simsy.Add(new SimObject());
+            //SimObject.width = width;
+            //imObject.height = height;
+            for(int i = 0; i< 5; i++) {
+                simsy.Add(new SimHorse(i*40+40));
             }
-            Random r = new Random();
-            simWolf = new SimObjectWolf(simsy[r.Next()%simsy.Count]);
-            simsy.Add(simWolf);
+            //Random r = new Random();
+            //simWolf = new SimObjectWolf(simsy[r.Next()%simsy.Count]);
+            //simsy.Add(simWolf);
         }
 
         public void startSim() {
-            foreach (SimObject sim in simsy) {
+            SimHorse.distanceToEnd = 600;
+            foreach (SimHorse sim in simsy) {
                 Thread t = new Thread(new ThreadStart(
                     () => {
                         while (continueSimulation) {
                             sim.move();
+                            if (sim.finished) break;
                             //check boundaries and rebound
-                            Thread.Sleep(10);
+                            //Thread.Sleep(10);
                         }
                     }));
                 t.Start();
